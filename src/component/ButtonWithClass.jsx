@@ -6,7 +6,8 @@ class ButtonWithClass extends Component {
       super()
       this.state = {
           key1: 'Click me',
-          key2: 0
+          key2: 0,
+          key3: 'Never click me'
       }
   }
 
@@ -19,6 +20,9 @@ class ButtonWithClass extends Component {
         <button type='submit' onClick={() => this.setState ({key2: 1})}>
         {this.state.key2}    
         </button>
+        <button onClick={() => this.setState({key3: 'Mondtam'})}>
+        {this.state.key3}
+          </button>
         </div>
     )
   }
