@@ -20,7 +20,7 @@ class ButtonWithClass extends Component {
     console.log('3')
     fetch('https://restcountries.com/v3.1/all')
       .then(res => res.json())
-        .then(countries => this.setState(
+        .then(countriesData => this.setState(
           () => {
             return {countries: countriesData}
           },
@@ -69,9 +69,10 @@ class ButtonWithClass extends Component {
           )
         } }>{this.state.title.main}
         </button>
-      </div><div className='countries'>
-          {this.state.countries.map((country, index) => <div key={index}>{country.name.common}</div>)}
-        </div></>
+      </div>
+      <div className='countries'>
+          {this.state.countries.map((country, index) => <div key={index}>{country.name.official}</div>)}
+      </div></>
     
     )}
 }

@@ -32,7 +32,8 @@ function ButtonWithHook() {
       } }>
         {buttonText1}
       </button>
-    </div><div className='countries'>
+    </div>
+    <div className='countries'>
         {countries.map((country, index) => <div key={index}>{country.name.common}</div>)}
 
       </div></>
